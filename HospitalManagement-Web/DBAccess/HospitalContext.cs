@@ -18,7 +18,7 @@ namespace HospitalManagement_Web.DBAccess
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Registration> Registrations { get; set; }
         public DbSet<Department> Departments { get; set; }
-        
+        public DbSet<UserProfile> UserProfiles { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
