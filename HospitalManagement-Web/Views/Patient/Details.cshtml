@@ -88,12 +88,16 @@
             <table class="table">
                 <tr>
                     <th>Department Name</th>
+                        <th>Room</th>
                 </tr>
                 @foreach (var item in Model.Registrations)
                 {
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Department.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Room)
                         </td>
                     </tr>
                 }

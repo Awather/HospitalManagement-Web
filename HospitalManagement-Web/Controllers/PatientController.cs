@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using PagedList;
 using System.Web;
 using System.Web.Mvc;
 using HospitalManagement_Web.DBAccess;
@@ -17,11 +18,24 @@ namespace HospitalManagement_Web.Controllers
 
 
         // GET: Patient
-        public ViewResult Index(string sortOrder, string searchString)
+        public ViewResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
+            ViewBag.CurrentSort = sortOrder;
             ViewBag.LastNameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.FirstNameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
+
             var patients = from p in db.Patients
                            select p;
             if (!String.IsNullOrEmpty(searchString))
@@ -45,7 +59,9 @@ namespace HospitalManagement_Web.Controllers
                     patients = patients.OrderBy(p => p.LastName);
                     break;
             }
-            return View(patients.ToList());
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+            return View(patients.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Patient/Details/5
@@ -74,7 +90,7 @@ namespace HospitalManagement_Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,LastName,FirstMidName,Gender,SocialSecurityNumber,Address,ZipCode,City,PhoneNumber,RegistrationDate")] Patient patient)
+        public ActionResult Create([Bind(Include = "ID,Last name, First name,Gender,Social security number,Address,Zip code,City,Phone number,Registration Date")] Patient patient)
         {
             try
             {
@@ -122,7 +138,7 @@ namespace HospitalManagement_Web.Controllers
             }
             var patientToUpdate = db.Patients.Find(id);
             if (TryUpdateModel(patientToUpdate, "",
-               new string[] { "ID,LastName,FirstMidName,Gender,SocialSecurityNumber,Address,ZipCode,City,PhoneNumber,RegistrationDate" }))
+               new string[] { "ID,LastName,FirstMidName,Gender,SocialSecurityNumber,Address,ZipCode,City,PhoneNumber, Room, RegistrationDate" }))
             {
                 try
                 {
