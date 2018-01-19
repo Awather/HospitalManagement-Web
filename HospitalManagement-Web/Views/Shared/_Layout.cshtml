@@ -8,37 +8,42 @@
     @Scripts.Render("~/bundles/modernizr")
     <link href="Content/Site.css" rel="stylesheet">
 
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
 
     <!-- Custom styles for this template -->
     <link href="Content/simple-sidebar.css" rel="stylesheet">
 
 </head>
 
+
+
 <body>
 
+    <div class="logo">
+        <img src="~/Images/HH6.png" alt="Hospital Management" width="1290" height="140">
+    </div>
 
-        <nav class="navbar navbar-expand-lg  navbar-dark bg-info" style="color:#fed9cd">
+    <div id="top-bar">
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-info">
             <a href="#menu-toggle" class="navbar-toggler-icon" id="menu-toggle"></a>
         </nav>
-
-
-        <div id="wrapper">
+    </div>
+       <div id="wrapper">
 
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand">
-                        <a @Html.ActionLink("Home", "Index", "Home")</a>
+                        <a> @Html.ActionLink("Home", "Index", "Home")</a>
                     </li>
                     <li>
-                        <a @Html.ActionLink("Registrations", "Index", "Registration")</a>
+                        <a> @Html.ActionLink("Registrations", "Index", "Registration")</a>
                     </li>
                     <li>
-                        <a @Html.ActionLink("Patients", "Index", "Patient")</a>
+                        <a> @Html.ActionLink("Patients", "Index", "Patient")</a>
                     </li>
                     <li>
-                        <a @Html.ActionLink("Departments", "Index", "Department")</a>
+                        <a> @Html.ActionLink("Departments", "Index", "Department")</a>
                     </li>
                     <li>
                         <a href="#">Events</a>

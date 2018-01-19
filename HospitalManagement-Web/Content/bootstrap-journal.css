@@ -6017,12 +6017,14 @@ a.bg-success:focus, a.bg-success:hover {
   background-color: #1a873a !important;
 }
 
-.bg-info {
-  background-color: #369 !important;
+
+.bg-info 
+{
+  background-color: #fed9cd !important;
 }
 
 a.bg-info:focus, a.bg-info:hover {
-  background-color: #264d73 !important;
+  background-color: #fed9cd !important; /*#264d73 !important;*/
 }
 
 .bg-warning {
@@ -6101,8 +6103,13 @@ a.bg-dark:focus, a.bg-dark:hover {
   border-color: #22B24C !important;
 }
 
-.border-info {
-  border-color: #369 !important;
+.bg-info {
+  background-color: #fed9cd !important;
+}
+
+.border-info /*Colour for top bar*/
+{
+  border-color: #fed9cd !important;
 }
 
 .border-warning {

@@ -9,6 +9,12 @@
     padding-right: 15px;
 }
 
+#top-bar
+{
+    background: #fed9cd;
+
+}
+
 ul.nav.navbar-nav 
 {
     list-style-type: none;
