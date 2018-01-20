@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
     <link href="Content/Site.css" rel="stylesheet">
 
-    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="Content/simple-sidebar.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 <body>
 
     <div class="logo">
-        <img src="~/Images/HH6.png" alt="Hospital Management" width="1290" height="140">
+        <img src="~/Images/HH6.png" alt="Hospital Management" width="1370" height="140">
     </div>
 
     <div id="top-bar">
@@ -28,75 +28,65 @@
             <a href="#menu-toggle" class="navbar-toggler-icon" id="menu-toggle"></a>
         </nav>
     </div>
-       <div id="wrapper">
-
-            <!-- Sidebar -->
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav">
-                    <li class="sidebar-brand">
-                        <a> @Html.ActionLink("Home", "Index", "Home")</a>
-                    </li>
-                    <li>
-                        <a> @Html.ActionLink("Registrations", "Index", "Registration")</a>
-                    </li>
-                    <li>
-                        <a> @Html.ActionLink("Patients", "Index", "Patient")</a>
-                    </li>
-                    <li>
-                        <a> @Html.ActionLink("Departments", "Index", "Department")</a>
-                    </li>
-                    <li>
-                        <a href="#">Events</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /#sidebar-wrapper -->
-            <!-- Page Content -->
-            <div id="page-content-wrapper">
-                <div class="container-fluid">
-                    <h1>Simple Sidebar</h1>
-                    <p>I'm a Barbie girl, in a Barbie world Life in plastic, it's fantastic. You can brush my hair, undress me everywhere. Imagination, life is your creation</p>
-                    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                    <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
-                </div>
-            </div>
-            <!-- /#page-content-wrapper -->
-
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a> @Html.ActionLink("Home", "Index", "Home")</a>
+                </li>
+                <li>
+                    <a> @Html.ActionLink("Registrations", "Index", "Registration")</a>
+                </li>
+                <li>
+                    <a> @Html.ActionLink("Patients", "Index", "Patient")</a>
+                </li>
+                <li>
+                    <a> @Html.ActionLink("Departments", "Index", "Department")</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
         </div>
-        <!-- /#wrapper -->
-        <!-- Bootstrap core JavaScript -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <!-- /#page-content-wrapper -->
 
-        <!-- Menu Toggle Script -->
-        <script>
-            $("#menu-toggle").click(function (e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-        </script>
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript -->
+    <!-- Menu Toggle Script -->
 
-        <div class="container body-content">
+    <div class="container body-content-fluid">
+        <!--<div class="container-fluid">-->
 
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - Worst Hospital aka Humanus Hospital</p>
-            </footer>
-        </div>
+        @RenderBody()
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Worst Hospital aka Humanus Hospital</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/CustomJavaScriptForSimpleSidebar.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("content", required: false)
+    @RenderSection("scripts", required: false)
+    
+
 </body>
 </html>
 

@@ -41,12 +41,12 @@ namespace HospitalManagement_Web.DBAccess
                 {
                 new Registration{PatientID = 1, DepartmentID = 1010},
                 new Registration{PatientID = 2, DepartmentID = 1010},
-                new Registration{PatientID = 3, DepartmentID = 2020, Room=Room.A20},
+                new Registration{PatientID = 3, DepartmentID = 2020},
                 new Registration{PatientID = 3, DepartmentID = 1010},
                 new Registration{PatientID = 4, DepartmentID = 2020},
                 new Registration{PatientID = 5, DepartmentID = 1010},
-                new Registration{PatientID = 6, DepartmentID = 3030, Room=Room.A30},
-                new Registration{PatientID = 7, DepartmentID = 4040, Room=Room.B40}
+                new Registration{PatientID = 6, DepartmentID = 3030},
+                new Registration{PatientID = 7, DepartmentID = 4040}
                 
                 };
 
