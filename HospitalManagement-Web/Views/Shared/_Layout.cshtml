@@ -16,18 +16,19 @@
 </head>
 
 
-
 <body>
+    
 
-    <div class="logo">
-        <img src="~/Images/HH6.png" alt="Hospital Management" width="1370" height="140">
-    </div>
+        <div class="logo">
+            <img src="~/Images/HH6.png" alt="Hospital Management" width="1370" height="140">
+        </div>
 
-    <div id="top-bar">
-        <nav class="navbar navbar-expand-lg  navbar-dark bg-info">
-            <a href="#menu-toggle" class="navbar-toggler-icon" id="menu-toggle"></a>
-        </nav>
-    </div>
+        <div id="top-bar">
+            <nav class="navbar navbar-expand-lg  navbar-dark bg-info">
+                <a href="#menu-toggle" class="navbar-toggler-icon" id="menu-toggle"></a>
+            </nav>
+        </div>
+    
     <div id="wrapper">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -61,32 +62,38 @@
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <!-- /#page-content-wrapper -->
+        <!-- /#wrapper -->
+        <!-- Bootstrap core JavaScript -->
+        <!-- Menu Toggle Script -->
+        <!-- <div class="container body-content">-->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        @RenderBody()
 
+                        <footer>
+                            <p>&copy; @DateTime.Now.Year - Worst Hospital aka Humanus Hospital</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- /#wrapper -->
-    <!-- Bootstrap core JavaScript -->
-    <!-- Menu Toggle Script -->
 
-    <div class="container body-content-fluid">
-        <!--<div class="container-fluid">-->
+        <!-- /#page-content-wrapper -->
 
-        @RenderBody()
+        <script src="~/Scripts/jquery.min.js"></script>
+        <script src="~/Scripts/CustomJavaScriptForSimpleSidebar.js"></script>
+        <script src="~/Scripts/bootstrap.bundle.min.js"></script>
 
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Worst Hospital aka Humanus Hospital</p>
-        </footer>
-    </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("content", required: false)
+        @RenderSection("scripts", required: false)
 
-    <script src="~/Scripts/jquery.min.js"></script>
-    <script src="~/Scripts/CustomJavaScriptForSimpleSidebar.js"></script>
-    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("content", required: false)
-    @RenderSection("scripts", required: false)
     
-
 </body>
 </html>
 

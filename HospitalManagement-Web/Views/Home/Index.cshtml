@@ -2,18 +2,20 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1></h1>
-    <p class="lead"></p>
-    <p><a href="" class="btn btn-primary btn-lg"> &raquo;</a></p>
-</div>
-
 <div class="row">
-    <div class="col-md-4">
-        <h2>----</h2>
+    <div class="col-10">
+
+        <h2>Welcome to Humanus Hospital</h2>
         <p>
-            
+            Here you can preform tasks that are patient related.
+            You can use the button below to register a new pateint.
+            But please do use the menu in order to go to the registration
+            section because I have worked really hard on it. Thank you for understanding.
         </p>
+        <p>
+            @Html.ActionLink("Patients", "Create", "Patient", new { @class = "btn btn-primary btn-lg" })
+        </p>
+
         <p><a class="btn btn-default" href=""> ---- &raquo;</a></p>
     </div>
     <div class="col-md-4">
