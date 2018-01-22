@@ -5410,6 +5410,9 @@ a.list-group-item:focus {
   border-top: 1px solid #dddddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  position:absolute;
 }
 
 .panel-group .panel {

@@ -124,6 +124,7 @@ html {
 
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
+
 }
 
 body {
@@ -553,6 +554,7 @@ mark,
   display: block;
   font-size: 80%;
   color: #777;
+  position:absolute;
 }
 
 .blockquote-footer::before {
@@ -5447,6 +5449,7 @@ button.close {
           justify-content: flex-end;
   padding: 15px;
   border-top: 1px solid #eee;
+  position: absolute;
 }
 
 .modal-footer > :not(:first-child) {

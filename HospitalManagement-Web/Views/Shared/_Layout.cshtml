@@ -34,7 +34,7 @@
                         <a> @Html.ActionLink("Home", "Index", "Home")</a>
                     </li>
                     <li>
-                        <a> @Html.ActionLink("Registrations", "Index", "Registration")</a>
+                        <a> @Html.ActionLink("Staff", "Index", "Registration")</a>
                     </li>
                     <li>
                         <a> @Html.ActionLink("Patients", "Index", "Patient")</a>
@@ -63,14 +63,15 @@
                         <div class="col-lg-12">
                             @RenderBody()
 
-                            <footer>
-                                <p>&copy; @DateTime.Now.Year - Humanus Hospital aka Worst Hospital</p>
-                            </footer>
                         </div>
                     </div>
                 </div>
+                <footer class="position-absolute">
+                    <p>&copy; @DateTime.Now.Year - Humanus Hospital aka Worst Hospital</p>
+                </footer>
             </div>
         </div>
+
 
         <!-- /#page-content-wrapper -->
 
