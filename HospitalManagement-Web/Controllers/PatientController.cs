@@ -90,7 +90,7 @@ namespace HospitalManagement_Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Last name, First name,Gender,Social security number,Address,Zip code,City,Phone number,Registration Date")] Patient patient)
+        public ActionResult Create([Bind(Include = "Lastname,FirstMidName,Gender,SocialSecurityNumber,Address,ZipCode,City,PhoneNumber,RegistrationDate")] Patient patient)
         {
             try
             {
@@ -138,7 +138,7 @@ namespace HospitalManagement_Web.Controllers
             }
             var patientToUpdate = db.Patients.Find(id);
             if (TryUpdateModel(patientToUpdate, "",
-               new string[] { "ID,LastName,FirstMidName,Gender,SocialSecurityNumber,Address,ZipCode,City,PhoneNumber, Room, RegistrationDate" }))
+               new string[] { "ID,LastName,FirstMidName,Gender,SocialSecurityNumber,Address,ZipCode,City,PhoneNumber, RegistrationDate" }))
             {
                 try
                 {

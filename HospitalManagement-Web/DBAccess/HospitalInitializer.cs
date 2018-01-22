@@ -14,13 +14,13 @@ namespace HospitalManagement_Web.DBAccess
         {
             var patients = new List<Patient>
             {
-            new Patient{FirstMidName="Carson",LastName="Alexander", Gender="Male", Address="Greenback", ZipCode=5151, City="Gothen", PhoneNumber = 0736696582, RegistrationDate = DateTime.Parse("2005-09-01")},
-            new Patient{FirstMidName="Meredith",LastName="Alonso", Gender="Female", Address="Stenback", ZipCode=5252, City="Skone", PhoneNumber = 073885599, RegistrationDate = DateTime.Parse("2002-09-01")},
-            new Patient{FirstMidName="Arturo",LastName="Anand",Gender="Male", Address="Hardback", ZipCode=5353, City="Gavle", PhoneNumber = 0722445588, RegistrationDate = DateTime.Parse("2002-09-01")},
-            new Patient{FirstMidName="Gytis",LastName="Barzdukas",Gender="Female", Address="Seaback", ZipCode=5454, City="Skone", PhoneNumber = 0745678911, RegistrationDate = DateTime.Parse("2002-09-01")},
-            new Patient{FirstMidName="Yan",LastName="Li",Gender="Female", Address="Lakeback", ZipCode=5555, City="Stockhlm", PhoneNumber = 077894561, RegistrationDate = DateTime.Parse("2002-09-01")},
-            new Patient{FirstMidName="Peggy",LastName="Justice",Gender="Female", Address="Treeback", ZipCode=5656, City="Gothen", PhoneNumber = 079876543, RegistrationDate = DateTime.Parse("2002-09-01")},
-            new Patient{FirstMidName="Nino",LastName="Olivetto",Gender="Male", Address="Stenback", ZipCode=5757, City="Gothen", PhoneNumber = 076541237, RegistrationDate = DateTime.Parse("2002-09-01")},
+            new Patient{SocialSecurityNumber=19600505-1111, FirstMidName="Carson",LastName="Alexander", Gender="Male", Address="Greenback", ZipCode=5151, City="Gothen", PhoneNumber = 0736696582, RegistrationDate = DateTime.Parse("2005-09-01")},
+            new Patient{SocialSecurityNumber=19750612-2222, FirstMidName="Meredith",LastName="Alonso", Gender="Female", Address="Stenback", ZipCode=5252, City="Skone", PhoneNumber = 073885599, RegistrationDate = DateTime.Parse("2002-09-01")},
+            new Patient{SocialSecurityNumber=19811220-3333, FirstMidName="Arturo",LastName="Anand",Gender="Male", Address="Hardback", ZipCode=5353, City="Gavle", PhoneNumber = 0722445588, RegistrationDate = DateTime.Parse("2002-09-01")},
+            new Patient{SocialSecurityNumber=19910918-4444, FirstMidName="Gytis",LastName="Barzdukas",Gender="Female", Address="Seaback", ZipCode=5454, City="Skone", PhoneNumber = 0745678911, RegistrationDate = DateTime.Parse("2002-09-01")},
+            new Patient{SocialSecurityNumber=19770605-5555, FirstMidName="Yan",LastName="Li",Gender="Female", Address="Lakeback", ZipCode=5555, City="Stockhlm", PhoneNumber = 077894561, RegistrationDate = DateTime.Parse("2002-09-01")},
+            new Patient{SocialSecurityNumber=19880130-6666, FirstMidName="Peggy",LastName="Justice",Gender="Female", Address="Treeback", ZipCode=5656, City="Gothen", PhoneNumber = 079876543, RegistrationDate = DateTime.Parse("2002-09-01")},
+            new Patient{SocialSecurityNumber=19900813-7777, FirstMidName="Nino",LastName="Olivetto",Gender="Male", Address="Stenback", ZipCode=5757, City="Gothen", PhoneNumber = 076541237, RegistrationDate = DateTime.Parse("2002-09-01")},
             };
 
             patients.ForEach(p => context.Patients.Add(p));
