@@ -288,6 +288,22 @@
     <Compile Include="Migrations\201801212157347_InitialCreate.Designer.cs">
       <DependentUpon>201801212157347_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801220053588_MaxLengthOnNames.cs" />
+    <Compile Include="Migrations\201801220053588_MaxLengthOnNames.Designer.cs">
+      <DependentUpon>201801220053588_MaxLengthOnNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801220100479_ColumnFirstName.cs" />
+    <Compile Include="Migrations\201801220100479_ColumnFirstName.Designer.cs">
+      <DependentUpon>201801220100479_ColumnFirstName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801220126347_MaxLengthOnNames1.cs" />
+    <Compile Include="Migrations\201801220126347_MaxLengthOnNames1.Designer.cs">
+      <DependentUpon>201801220126347_MaxLengthOnNames1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801220127559_ColumnFirstName1.cs" />
+    <Compile Include="Migrations\201801220127559_ColumnFirstName1.Designer.cs">
+      <DependentUpon>201801220127559_ColumnFirstName1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Department.cs" />
@@ -433,6 +449,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801212157347_InitialCreate.resx">
       <DependentUpon>201801212157347_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801220053588_MaxLengthOnNames.resx">
+      <DependentUpon>201801220053588_MaxLengthOnNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801220100479_ColumnFirstName.resx">
+      <DependentUpon>201801220100479_ColumnFirstName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801220126347_MaxLengthOnNames1.resx">
+      <DependentUpon>201801220126347_MaxLengthOnNames1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801220127559_ColumnFirstName1.resx">
+      <DependentUpon>201801220127559_ColumnFirstName1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

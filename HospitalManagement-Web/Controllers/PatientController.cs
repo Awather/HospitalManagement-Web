@@ -138,7 +138,7 @@ namespace HospitalManagement_Web.Controllers
             }
             var patientToUpdate = db.Patients.Find(id);
             if (TryUpdateModel(patientToUpdate, "",
-               new string[] { "ID,LastName,FirstMidName,Gender,SocialSecurityNumber,Address,ZipCode,City,PhoneNumber, RegistrationDate" }))
+               new string[] { "ID,Lastname,FirstMidName,Gender,SocialSecurityNumber,Address,ZipCode,City,PhoneNumber,RegistrationDate" }))
             {
                 try
                 {
